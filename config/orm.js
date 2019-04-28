@@ -17,13 +17,13 @@ var orm = {
     queryString += " (";
     queryString += col;
     queryString += ") ";
-    queryString += "VALUES (";
+    queryString += "VALUES ('";
     queryString += val;
-    queryString += ") ";
+    queryString += "') ";
 
     console.log(queryString);
 
-    connection.query(queryString, vals, function(err, result) {
+    connection.query(queryString, function(err, result) {
       if (err) {
         throw err;
       }
@@ -32,10 +32,11 @@ var orm = {
     });
   },
   // An example of objColVals would be {name: panther, sleepy: true}
-  updateOne: function(table, col, condition, cb) {
+  updateOne: function(table, col, colValue,condition, cb) {
     var queryString = "UPDATE " + table;
     queryString += " SET ";
     queryString += col;
+    queryString += " = " + colValue;
     queryString += " WHERE ";
     queryString += condition;
 

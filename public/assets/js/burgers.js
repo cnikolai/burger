@@ -5,7 +5,7 @@ $(function() {
       var devour = $(this).data("devour");
   
       var newDevour = {
-        devour: devour
+        id: id
       };
   
       // Send the PUT request.
@@ -14,7 +14,7 @@ $(function() {
         data: newDevour
       }).then(
         function() {
-          console.log("changed devour to", newDevour);
+          console.log("changed devour to of id: ", id);
           // Reload the page to get the updated list
           location.reload();
         }
@@ -24,6 +24,7 @@ $(function() {
     $(".create-form").on("submit", function(event) {
       // Make sure to preventDefault on a submit event.
       event.preventDefault();
+      console.log("just submited form");
   
       var newBurger = {
         name: $("#newburger").val().trim()

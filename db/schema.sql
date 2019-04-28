@@ -7,5 +7,5 @@ use burgers_db;
 CREATE TABLE burgers (
 	id integer primary key auto_increment, 
     burger_name varchar(100),
-    devoured boolean
+    devoured boolean default false
 );
