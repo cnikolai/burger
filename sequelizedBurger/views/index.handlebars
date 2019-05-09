@@ -1,0 +1,25 @@
+<div>
+    <img src="/assets/img/burger.jpg" alt="Burger Image" height="200" width="200">
+</div>
+    <div class="sidebyside">
+        <div class="side">
+          {{#each burgers}}
+            {{#unless this.devoured}}
+            <div class="burgers">{{this.id}}. {{this.burger_name}}<button data-id="{{this.id}}" data-devour="{{this.devoured}}" class="devour">Devour It!</button></div>{{/unless}}
+          {{/each}}
+        </div>
+        <div class="side">
+          {{#each burgers}}
+            {{#if this.devoured}}
+            <div class="burgers">{{this.id}}. {{this.burger_name}}</div>{{/if}}
+          {{/each}}
+        </div>
+    </div>
+<h1>Eat-Da-Burger!</h1>
+<form class="create-form">
+    <input type="text" id="newburger" name="burger" size="50">
+    <br>
+    <br>
+    <button type="submit" name="submit-newburger">Submit</button>
+</form>
+<p>Enter the burger you want to eat. Then click the Submit button</p>

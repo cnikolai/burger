@@ -1,0 +1,37 @@
+body,html {
+    background-color: goldenrod;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    /* height: 100%; */
+}
+
+.devour {
+    background-color: cornflowerblue;
+    margin-left: 10px;
+}
+
+/* #burger-block {
+    background-color: white;
+} */
+
+.burgers {
+    background-color: white;
+    width: 300px;
+    margin-right: 20px;
+}
+
+#newburger {
+    height: 40px;
+    font-size: 14pt;
+}
+
+.sidebyside {
+    display: flex;
+    justify-content: center;
+}
+
+.side {
+    float: left;
+}
